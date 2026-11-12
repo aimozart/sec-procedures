@@ -12,6 +12,9 @@ Security and privacy policies and procedures for the Entropa project family: ent
 - `policies/` P0-P12, one page each, testable MUST / MUST NOT statements, with a dated status line per mechanism.
 - `docs/SITES-SECURITY-BASELINE.md` the current security baseline for GCP, the three sites, GitHub and administration, including known gaps and their fixes.
 
+- `docs/architecture/LLM-SECURITY-PROOF.md` the plan to prove LLM security row by row: control in code, attack test, measured number (plan approved; results pending).
+- `docs/governance/PLANNING-AND-DECISION-RECORDS.md` how each build stage is planned, approved, built and checked against its outcome, with signed receipts.
+
 ## Status
 Policies approved by the Human Principal on 2026-10-21; mechanism status lines refreshed 2026-11-12. Review cadence: quarterly. Gaps are listed, not hidden.
 

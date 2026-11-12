@@ -31,7 +31,8 @@ Status key: DONE (verified on the date shown), PARTIAL, GAP (known, with the fix
 |---|---|---|---|
 | HTTPS with managed certificates | yes | yes | yes |
 | HSTS header | yes (about 1 year) | yes | yes |
-| Content-Security-Policy, X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy | NOT SET | NOT SET | NOT SET |
+| X-Content-Type-Options nosniff, X-Frame-Options DENY, Referrer-Policy, Permissions-Policy | yes (2026-11-12) | pull request open (released on merge) | yes (2026-11-12) |
+| Content-Security-Policy | report-only (2026-11-12); enforce after a browser pass per page | report-only in the same pull request | report-only (2026-11-12) |
 | No logins, no forms storing data | yes (contact form posts to a rate-limited service; address never shown on pages) | yes (static plus read-only data) | yes |
 | Deploys | scripted release from the live files with dry run and verification, rollback version printed | GitHub Actions, keyless, staging channel first, live only when the owner sets GO_LIVE | scripted release |
 | Synthetic data only; export scans refuse secrets, identifiers, canary strings | n/a | yes (CI and exporter) | yes |
