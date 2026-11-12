@@ -1,0 +1,12 @@
+# P11 Secrets and key management (DRAFT)
+Owner role: Human Principal. Supports: HIPAA 164.312(a)(2)(iv), 164.312(d) authentication, 164.308(a)(4); HITRUST cryptography and authentication categories; NIST AI RMF Manage. Wording: aligned with; MFA is strong, not phishing-resistant, and is described that way.
+
+1. Secrets (passwords, keys, tokens, recovery codes) MUST NEVER be committed, pasted into chat, printed in logs or placed in prompts; agents MUST NOT read credential files.
+2. Every human account MUST use strong multi-factor authentication; recovery codes MUST be kept encrypted offline and printed in a safe place; super-admin self-recovery MUST be off where the platform allows.
+3. Long-lived access keys SHOULD NOT exist; agents and pipelines MUST use short-lived credentials (role assumption with MFA, workload identity federation); any remaining long-lived key MUST be listed with an owner and a retirement date, and unused keys MUST be disabled.
+4. Each actor MUST have its own signing key; signing keys MUST live in a managed key service (KMS) where possible; key issuance, rotation and revocation MUST be recorded as signed events.
+5. Algorithm agility MUST be kept: signed records carry an algorithm label and verification dispatches on it, so a post-quantum or replacement algorithm can be swapped in.
+6. Secret scanning MUST run on every repository (gitleaks in CI and before any push; push protection on); a finding MUST be read before it is allowlisted, and each allowlist entry MUST carry its reason.
+7. Revoking or deleting a credential MUST follow the hard rule (exact word, standalone yes/no); disabling (reversible) comes first.
+Mechanism (status, refreshed 2026-11-12): strong MFA on all human accounts (done); backup codes vaulted (done); AWS roles with MFA (done); 10 unused GCP service-account keys disabled (done); keyless CI to GCP through workload identity for the healthcare publisher (done 2026-11-04); long-lived AWS CLI key (to retire); cryptographic inventory (planned).
+Public evidence: the live explorers (scryon.entropa.space, scryon-health.entropa.space, scryon-council.entropa.space), docs.entropa.space, and the public repos aimozart/entropa-public, aimozart/scryon-health-data, aimozart/scryon-council and aimozart/hippagrchealthcare. Entropa's source code is private by decision; its behaviour is verifiable through the signed public ledgers and the in-browser verifier.
