@@ -70,3 +70,9 @@ node_modules/
 __pycache__/
 .pytest_cache/
 uv.lock.bak
+
+# Agent rule files stay private (Gitea only)
+CLAUDE.md
+**/CLAUDE.md
+CLAUDE.local.md
+.claude/settings.local.json*
