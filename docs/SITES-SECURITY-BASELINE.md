@@ -26,6 +26,8 @@ Status key: DONE (verified on the date shown), PARTIAL, GAP (known, with the fix
 | Budget alerts and per-stage price check before anything billable | DONE as process; confirm alert thresholds on the GCP budget |
 | DNS: Cloud DNS zones for all domains | DONE; DNSSEC is NOT enabled on any zone: GAP (needs a DS record at the registrar) |
 
+> Update 2026-11-13: the hippagrchealthcare.site hosting site and the Scryon Health Data explorer were retired (DNS kept); the table below records the state measured on 2026-11-12.
+
 ## 3. The three sites (Firebase Hosting)
 | Control | entropa.space and subdomains | hippagrchealthcare.site | bigironbank.online |
 |---|---|---|---|
