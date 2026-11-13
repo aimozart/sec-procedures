@@ -1,6 +1,6 @@
 # sec-procedures
 
-Security and privacy policies and procedures for the Entropa project family: entropa.space (a signed, tamper-evident ledger for AI decisions), hippagrchealthcare.site (a synthetic-data healthcare analytics showcase) and bigironbank.online. Published openly so anyone can read what we commit to and check it against the public ledgers.
+Security and privacy policies and procedures for the Entropa project family: entropa.space (a post-quantum-signed, witnessed evidence layer for controls and AI decisions) and its public sites and repositories. Published openly so anyone can read what we commit to and check it against the public ledgers.
 
 **Read this first**
 - **All data is synthetic.** No real patient, customer or personal data is processed.
